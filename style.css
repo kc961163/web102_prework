@@ -21,6 +21,15 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center; /* Vertically centers items within the container */
+    justify-content: space-around; /* Evenly distributes space around items */
+    padding: 20px; /* Adds padding for better spacing */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -30,6 +39,11 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+}
+
+.stats-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 #num-contributions, #total-raised, #num-games {
