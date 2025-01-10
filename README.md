@@ -10,14 +10,14 @@ Time spent: 5 hours spent in total
 
 The following **required** functionality is completed:
 
-* [x] The introduction section explains the background of the company and how many games remain unfunded.
-* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+- [x] The introduction section explains the background of the company and how many games remain unfunded.
+- [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+- [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+- [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [x] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
 
 Addeda glow effect to the buttons in the Our Games section.
 
@@ -25,12 +25,15 @@ Addeda glow effect to the buttons in the Our Games section.
 
 Here's a walkthrough of implemented features:
 
-<img src='./assets/Kapture%202025-01-09%20at%2020.52.06.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./Kapture%202025-01-09%20at%2020.52.06.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
+
 GIF created with ...  
 [Kap](https://getkap.co/) for macOS
+
 <!-->
+
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
@@ -53,4 +56,5 @@ I had to revise HTML/CSS/JS concepts to complete this project.
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License 
+    See the License for the specific language governing permissions and
+    limitations under the License.
