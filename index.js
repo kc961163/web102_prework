@@ -133,4 +133,55 @@ const allBtn = document.getElementById("all-btn");
 // add event listeners with the correct functions to each button
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
-allBtn.addEventListen
+allBtn.addEventListener("click", showAllGames);
+
+
+/*************************************************************************************
+ * Challenge 6: Add more information at the top of the page about the company.
+ * Skills used: template literals, ternary operator
+*/
+
+// grab the description container
+const descriptionContainer = document.getElementById("description-container");
+
+// use filter or reduce to count the number of unfunded games
+const numUnfundedGames = GAMES_JSON.filter(game => game.pledged < game.goal).length;
+
+
+// create a string that explains the number of unfunded games using the ternary operator
+const summary = numUnfundedGames > 0
+    ? `A total of $${GAMES_JSON.reduce((sum, game) => sum + game.pledged, 0).toLocaleString()} has been raised for ${GAMES_JSON.length} games. Currently, ${numUnfundedGames} ${numUnfundedGames === 1 ? 'game remains' : 'games remain'} unfunded. We need your help to fund these amazing games!`
+    : `A total of $${GAMES_JSON.reduce((sum, game) => sum + game.pledged, 0).toLocaleString()} has been raised for ${GAMES_JSON.length} games. All games have been successfully funded!`;
+
+
+// create a new DOM element containing the template string and append it to the description container
+const summaryElement = document.createElement('p');
+summaryElement.innerHTML = summary;
+descriptionContainer.appendChild(summaryElement);
+
+/************************************************************************************
+ * Challenge 7: Select & display the top 2 games
+ * Skills used: spread operator, destructuring, template literals, sort 
+ */
+
+const firstGameContainer = document.getElementById("first-game");
+const secondGameContainer = document.getElementById("second-game");
+
+const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+    return item2.pledged - item1.pledged;
+});
+
+// use destructuring and the spread operator to grab the first and second games
+const [topGame, runnerUp] = sortedGames;
+
+
+// create a new element to hold the name of the top pledge game, then append it to the correct element
+const topGameElement = document.createElement('p');
+topGameElement.innerHTML = `${topGame.name} is the top funded game with $${topGame.pledged.toLocaleString()}`;
+firstGameContainer.appendChild(topGameElement);
+
+
+// do the same for the runner up item
+const runnerUpElement = document.createElement('p');
+runnerUpElement.innerHTML = `${runnerUp.name} is the runner up with $${runnerUp.pledged.toLocaleString()}`;
+secondGameContainer.appendChild(runnerUpElement);
